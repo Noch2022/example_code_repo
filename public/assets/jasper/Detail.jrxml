@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Detail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a11678b9-0f47-4dc7-8193-dda61e5e607c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="privilledgeID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select id,slug,title from privilledges where id=$P{privilledgeID} limit 1]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="slug" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="slug"/>
+		<property name="com.jaspersoft.studio.field.label" value="slug"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="title"/>
+		<property name="com.jaspersoft.studio.field.label" value="title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="slug">
+		<groupExpression><![CDATA[$F{slug}]]></groupExpression>
+	</group>
+	<group name="title">
+		<groupExpression><![CDATA[$F{title}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="45" width="153" height="30" uuid="3503d35c-2e6e-43d6-a681-e1100d20071b"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detail Page]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="217" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="2" width="130" height="30" uuid="fb5b553e-3be0-49e5-919f-d4d810b9a264"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="42" width="130" height="30" uuid="0c537e81-da0b-4682-afaf-4bc5a6194d80"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[SLUG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="72" width="130" height="30" uuid="e7027216-7e2c-474a-b1b3-d6beb42c72ee"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="23" width="0" height="30" uuid="5ce3ae4c-e540-4ccd-a03b-d18752b86486">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{privilledgeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="2" width="190" height="30" uuid="1491a0e9-752a-406a-b84a-5b5c82aa8d3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20520098-561a-42d9-a304-11ff7e33da25"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="44" width="190" height="30" uuid="a1f726d2-11f8-4e4e-bd21-3934bba16ded">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0eba0aea-ed63-4cc3-abb4-83942e3f86c4"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{slug}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="74" width="190" height="30" uuid="a0bbaf7f-f456-471a-b77c-64ef2f5374fa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="736bee17-8c3c-4bc4-af6d-fd77c53723cd"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="360" y="30" width="190" height="136" uuid="34b1fa3b-2337-4c73-b8af-14d014d7a694"/>
+				<imageExpression><![CDATA["https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="159" splitType="Stretch"/>
+	</summary>
+</jasperReport>
