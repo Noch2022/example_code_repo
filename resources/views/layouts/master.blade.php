@@ -45,6 +45,7 @@
                 <li><a href="/area_chart">Area Chart</a></li>
                 <li><a href="/scatter_chart">Scatter Chart</a></li>
                 <li><a href="/room">Room</a></li>
+                <li><a href="/attendance">Attendance</a></li>
             </ul>
         </div>
     </nav>

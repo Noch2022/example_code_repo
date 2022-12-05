@@ -17,6 +17,12 @@ Route::get('/', function () {
     // return redirect('reports');
     return view('home');
 });
+
+Route::resource('attendance','AttendanceController');
+Route::get('listing_attendance','AttendanceController@listingAttendance');
+Route::get('listing_attendance_detail','AttendanceController@listingAttendanceDetail');
+
+
 Route::get('calendar_chart','ChartController@calendarChart');
 Route::get('pie_chart','ChartController@pieChart');
 Route::get('column_chart','ChartController@columnChart');
