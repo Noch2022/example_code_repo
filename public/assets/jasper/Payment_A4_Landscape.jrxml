@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec1fd397-047d-4420-a0d1-79eb4ead5d6e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My MySQL New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from privilledges limit 1]]>
+	</queryString>
+	<field name="id" class="java.math.BigInteger">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="parent_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="parent_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="parent_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="slug" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="slug"/>
+		<property name="com.jaspersoft.studio.field.label" value="slug"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="title"/>
+		<property name="com.jaspersoft.studio.field.label" value="title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="creator_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="creator_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="creator_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="updator_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="updator_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="updator_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="group_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="group_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="group_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="deleted_at" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="deleted_at"/>
+		<property name="com.jaspersoft.studio.field.label" value="deleted_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.label" value="created_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="privilledges"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="parent_id">
+		<groupExpression><![CDATA[$F{parent_id}]]></groupExpression>
+	</group>
+	<group name="slug">
+		<groupExpression><![CDATA[$F{slug}]]></groupExpression>
+	</group>
+	<group name="title">
+		<groupExpression><![CDATA[$F{title}]]></groupExpression>
+	</group>
+	<group name="creator_id">
+		<groupExpression><![CDATA[$F{creator_id}]]></groupExpression>
+	</group>
+	<group name="updator_id">
+		<groupExpression><![CDATA[$F{updator_id}]]></groupExpression>
+	</group>
+	<group name="group_id">
+		<groupExpression><![CDATA[$F{group_id}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="deleted_at">
+		<groupExpression><![CDATA[$F{deleted_at}]]></groupExpression>
+	</group>
+	<group name="created_at">
+		<groupExpression><![CDATA[$F{created_at}]]></groupExpression>
+	</group>
+	<group name="updated_at">
+		<groupExpression><![CDATA[$F{updated_at}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="3" width="40" height="29" uuid="30600669-2cfa-47f0-868a-8847ef755b0e"/>
+				<imageExpression><![CDATA["https://cdn-icons-png.flaticon.com/512/174/174857.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="50" y="3" width="170" height="19" uuid="e73bd685-3490-42dd-9f27-b51c5295d3cb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[សាលារៀន កូនខ្ញំុរៀន]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="20" width="130" height="19" uuid="0546f8dd-778a-4cdb-a1e2-5738e9a3e300"/>
+				<textElement>
+					<font fontName="Carlito" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Koun Khnom Rean School]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="43" width="808" height="1" uuid="f53ea27a-62cd-4bc6-b58b-34af6a1e5c8a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="478" y="3" width="330" height="36" forecolor="#6B6B6B" uuid="e929dbb2-5de6-4a83-a404-943c7586ff9c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Address: St21.A, Setbo Village,Setbo Commun,Takhmau Town, Kandal Province
+Email: sfdfsafsedfdfsfd@io.com
+Facebook:  facebook.com/sfddfsdfsdf
+Tel: 012 777 240 | 098 677 555]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="333" y="2" width="137" height="21" forecolor="#251C85" uuid="a70e5e61-96fa-474e-b50c-53f580d46b07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Invoice]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="740" y="2" width="60" height="18" uuid="4b47ea3b-ed1f-443b-b61f-2516eedfed4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="680" y="2" width="60" height="18" uuid="b7198316-1cc6-45c1-abc2-8f3bc2aa9328">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Invoice No:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="9" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="383" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="1" width="100" height="26" uuid="664425c1-749c-48e4-a917-02430e22ca1b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Student Name: ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="25" width="120" height="1" uuid="ebf8181c-e04e-49c8-a742-f8dc4ae0c6c2">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="32" width="100" height="26" uuid="2c8bc638-6190-469a-95e0-6368b826dde1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Gender:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="56" width="120" height="1" uuid="ebe101ce-085e-403b-a317-59b525dd6e1d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="63" width="100" height="26" uuid="9e8a7b61-4920-4cfa-aa80-6122d0a5ad07"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Study Shift:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="87" width="120" height="1" uuid="e6ee62c9-73fd-42f8-82d8-4bc5c9c0e791">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="120" y="118" width="120" height="1" uuid="0d783ca7-2fca-463c-aed5-841fdefd15a0">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="94" width="100" height="26" uuid="c4236f6d-2b36-4640-9d5f-687a5f72e1a5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Study Time:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="148" width="120" height="1" uuid="bf4d1356-4374-4d38-b04b-69abe41cc0a1">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="124" width="100" height="26" uuid="ede8e32b-5cc7-4d3b-83e0-2450563e699c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Grade:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="179" width="120" height="1" uuid="e80f34a6-dfda-4c68-805a-58bd619bbfac">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="155" width="100" height="26" uuid="88da36c8-56c4-41e4-b328-782d8304ceba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Curriculum]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="211" width="120" height="1" uuid="8b5f41ae-64f6-4202-b2a8-99e10914c275">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="187" width="100" height="26" uuid="0784004a-b5c6-4944-a238-d0888daa49a6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Payment Date:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="120" y="243" width="120" height="1" uuid="5ff155df-9d07-4ae9-8833-bcbb2b541369">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="219" width="100" height="26" uuid="c1910da4-13cf-481c-9c29-7383af77f5ae"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Payment Phase:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="417" y="25" width="120" height="1" uuid="a108602e-078a-47bc-8f4e-3bef69add5d7">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="317" y="1" width="64" height="26" uuid="349351e1-e66b-46de-9c6d-438b9b5a7862"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[From Date:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="607" y="25" width="120" height="1" uuid="fda2627e-778d-43f9-ad10-fa5e230c7713">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="517" y="1" width="54" height="26" uuid="9277953f-e33d-4de2-9be8-9a1dcb0bf9b7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[To Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="32" width="124" height="26" uuid="70b71e79-4e53-49e7-b19e-4c326b580edc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Transportation Fee:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="441" y="56" width="70" height="1" uuid="ab32c6fc-1a2a-4107-8b80-1fb77e1e1868">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<rectangle>
+				<reportElement x="316" y="98" width="424" height="60" uuid="b0b7d624-d30e-4b37-8e6c-ff7401a76fde"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#575555"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="316" y="71" width="116" height="22" uuid="7692d353-f875-4621-8a2f-60a4feb3130f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Book Accessaries:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="168" width="116" height="22" uuid="490f4bea-a8c3-4e39-8006-b46040190ac2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Uniform:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="316" y="196" width="424" height="60" uuid="9bcd601f-18e8-499a-9fcd-3253efd444fe"/>
+				<graphicElement>
+					<pen lineStyle="Dotted" lineColor="#575555"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="330" y="101" width="90" height="17" uuid="d3f4a517-246a-46bd-94d6-afea35bbdd65">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="101" width="30" height="17" uuid="565d4e9b-ba48-4a98-8442-a61098c29c33">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="101" width="70" height="17" uuid="601ce5dd-4fd9-4a97-9f67-3da666cc1fd5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="199" width="90" height="17" uuid="9ac79094-bdb4-4451-8788-3b0266e96dfb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="199" width="30" height="17" uuid="162f2373-6bf3-485c-8b2a-067a108dd03a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="199" width="70" height="17" uuid="2eddc82f-5f5a-429c-ab62-b1464584c989">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="262" width="100" height="26" uuid="eb971d51-7019-4354-bb0e-07258add26ba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Amount Due:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="350" width="60" height="16" uuid="fa477619-c838-422a-98e3-6d9872a8ad6c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Receiver]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="290" width="36" height="20" uuid="643d43e1-6572-415a-92cc-4706175a26d9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="290" width="90" height="20" uuid="b0553c5c-277e-4fff-bb3b-55771d16832a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[05 Jan 2022]]></text>
+			</staticText>
+			<image>
+				<reportElement x="680" y="311" width="50" height="40" uuid="b6559778-145a-4b08-99e6-cc15d5882840"/>
+				<imageExpression><![CDATA["https://www.nicepng.com/png/detail/298-2989773_this-is-an-image-of-a-signature-with.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="428" y="262" width="89" height="26" uuid="db13cf2f-dc31-4eed-8db6-626fc8a29cd8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="40" height="14" uuid="a1488ed6-2442-425a-bf98-2833e874484f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Note:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="17" width="210" height="14" uuid="f9673210-7dee-4c90-8667-26567c54c1a9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[All payments must not be payable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="32" width="420" height="14" uuid="94d6ad57-fe9f-424f-82a4-7af2625db7d0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[All payment class can not change until payment period end]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="47" width="800" height="1" uuid="1c2242f0-2947-4064-8095-21eb9774079c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="690" y="30" width="110" height="14" uuid="db75b0cd-3447-44f0-82cf-b82605487ccf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[System Date: 02 Jan 2022]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="370" y="4" width="100" height="16" uuid="07d6d857-ab88-4d08-8af1-a27d0b4a5530"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

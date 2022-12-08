@@ -117,7 +117,9 @@
         outline: none;
     }
 </style>
+<script>
 
+</script>
 @section('body_content')
 <div class="row">
     <div class="sms_att_daily_operation">
@@ -129,7 +131,8 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="submit_action">Submit Action</button>
+                    {{-- <button class="submit_action">Submit Action</button> --}}
+                    <a class="btn btn-primary submit_action" id="submit_action">Submit Action</a>
                 </div>
             </div>
             <table class="table table-bordered table-collapsed table-striped">
@@ -146,28 +149,28 @@
                         <th class="textCenter">Late</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="attendance_tbody">
                     @for($i=1;$i<=12;$i++)
-                    <tr>
+                    <tr empID={{$i}}>
                         <td class="textCenter">Emp Name 00{{$i}}</td>
                         <td class="textCenter">
-                            <label><input type="radio" class="sms_radio" value="p" name="attendance{{$i}}[]"/></label>
+                            <label><input type="radio" empID="{{$i}}" class="sms_radio" value="p" name="attendance{{$i}}[]"/></label>
                         </td>
                         <td class="textCenter">
-                            <label><input type="radio" class="sms_radio" value="a" name="attendance{{$i}}[]"/></label>
+                            <label><input type="radio" empID="{{$i}}" class="sms_radio" value="a" name="attendance{{$i}}[]"/></label>
                         </td>
                         <td class="textCenter">
-                            <label><input type="radio" class="sms_radio" value="e" name="attendance{{$i}}[]"/></label>
+                            <label><input type="radio" empID="{{$i}}" class="sms_radio" value="e" name="attendance{{$i}}[]"/></label>
                         </td>
                         <td class="textCenter">
-                            <label><input type="radio" class="sms_radio" value="l" name="attendance{{$i}}[]"/></label>
+                            <label><input type="radio" empID="{{$i}}" class="sms_radio" value="l" name="attendance{{$i}}[]"/></label>
                         </td>
                         <td>
                             <div class="take_note_operation">
                                 <label class="edit_icon">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                 </label>
-                                <input type="text" class=" take_note" placeholder=""/>
+                                <input type="text" name="take_note" empID="{{$i}}" class=" take_note" placeholder=""/>
                             </div>
                         </td>
                     </tr>

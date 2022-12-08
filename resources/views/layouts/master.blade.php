@@ -9,6 +9,19 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#submit_action").click(function(){
+                
+                var abc = $(".attendance_tbody").children();
+                $.each($(abc), function(key,element) {
+                    console.log(key+"---"+element);
+                    console.log(element.id);
+                });
+                console.log(abc);
+            });
+        });
+    </script>
   <style>
     .body_content{
         width: 90%;
@@ -46,6 +59,7 @@
                 <li><a href="/scatter_chart">Scatter Chart</a></li>
                 <li><a href="/room">Room</a></li>
                 <li><a href="/attendance">Attendance</a></li>
+                <li><a href="/reports">Report</a></li>
             </ul>
         </div>
     </nav>
