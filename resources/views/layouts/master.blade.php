@@ -60,6 +60,8 @@
                 <li><a href="/room">Room</a></li>
                 <li><a href="/attendance">Attendance</a></li>
                 <li><a href="/reports">Report</a></li>
+                <li><a href="/media_print">Media Print</a></li>
+                <li><a href="/strapi">Strapi</a></li>
             </ul>
         </div>
     </nav>

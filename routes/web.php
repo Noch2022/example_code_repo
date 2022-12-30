@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use PHPJasper\PHPJasper;  
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('clearArtisan',function(){
+    Artisan::call('optimize:clear');
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +44,12 @@ Route::resource('videos','VideoController');
 Route::resource('reports','ReportController');
 Route::get('printAll','ReportController@printAll');
 Route::get('printOne/{privilledgeID}','ReportController@printOne');
+
+Route::get('media_print','ReportController@mediaPrint');
+
+Route::get('strapi','StrapiController@index');
+Route::get('homepage','HomePageController@index');
+
 Route::get('/java', function () {
     try{
     $input = '/home/sodexs/JaspersoftWorkspace/MyProject/Blank_A4.jrxml';   
@@ -53,7 +66,7 @@ Route::get('/java', function () {
                 'database' => 'laravel',
                 'port' => '3306'
             ]
-        ];
+    ];
         $jasper = new PHPJasper;
 
         $jasper->process(
@@ -71,12 +84,12 @@ Route::get('/java', function () {
 
 Route::get('/detail/{privilledgeID}', function ($privilledgeID) {
     try{
-    $input = '/home/sodexs/JaspersoftWorkspace/MyProject/Detail.jrxml';   
-        $output = '/home/sodexs/JaspersoftWorkspace/MyProject';
+    $input = '/home/sodexs/Downloads/JASPER STUDIO/workspace/MyReports/Blank_A4.jrxml';   
+        $output = '/home/sodexs/Downloads/JASPER STUDIO/workspace/MyReports';
         $options = [
             'format' => ['pdf'],
             'locale' => 'en',
-            'params' => ['privilledgeID'=>$privilledgeID],
+            // 'params' => ['privilledgeID'=>$privilledgeID],
             'db_connection' => [
                 'driver' => 'mysql',
                 'username' => 'usr',
@@ -93,6 +106,17 @@ Route::get('/detail/{privilledgeID}', function ($privilledgeID) {
                 $output,
                 $options
         )->execute();
+
+        $output = $output."/Blank_A4.pdf";
+        $file = $filename = "file://".$output;
+        header('Content-type: application/pdf');
+        header('Content-Disposition: inline; filename="' . $filename . '"');
+        header('Content-Transfer-Encoding: binary');
+        header('Accept-Ranges: bytes');
+        readfile($file);
+
+
+
     }catch(\Exception $ex){
         dd($ex->getMessage());
     }

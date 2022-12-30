@@ -105,6 +105,10 @@ class ReportController extends Controller
         //
     }
 
+    public function mediaPrint(){
+        return view('mediaPrint',compact([]));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
