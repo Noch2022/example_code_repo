@@ -60,10 +60,13 @@ class ReportController extends Controller
     public function printOne($privilledgeID){
         try{
             $input = public_path('assets/jasper/Detail.jrxml');
+            // $input = "/home/sodexs/JaspersoftWorkspace/MyProject/Detail.jrxml";
             $output = public_path('assets/jasper/pdf/');
             $options = [
                 'format' => ['pdf'],
                 'locale' => 'en',
+                'fonts' => public_path('fonts/fontsfamily1672979232214.xml'),
+                // 'fonts' => public_path('fonts'), // this part here
                 'params' => ['privilledgeID'=>$privilledgeID],
                 'db_connection' => [
                     'driver' => 'mysql',
