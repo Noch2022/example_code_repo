@@ -62,6 +62,8 @@
                 <li><a href="/reports">Report</a></li>
                 <li><a href="/media_print">Media Print</a></li>
                 <li><a href="/strapi">Strapi</a></li>
+                <li><a href="/date_converter">Date Converter</a></li>
+                <li><a href="/amount_converter/350">Amount Converter</a></li>
             </ul>
         </div>
     </nav>

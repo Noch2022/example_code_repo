@@ -81,6 +81,10 @@ Route::get('/java', function () {
 
 });
 
+Route::get('move','ConverterController@moveFile');
+Route::get('/number/{number}','ConverterController@n2nKH');
+Route::get('/date_converter','ConverterController@dateConverter');
+Route::get('/amount_converter/{number}','ConverterController@amountConverter');
 
 Route::get('/detail/{privilledgeID}', function ($privilledgeID) {
     try{
