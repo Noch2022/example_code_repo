@@ -45,6 +45,8 @@ Route::resource('reports','ReportController');
 Route::get('printAll','ReportController@printAll');
 Route::get('printOne/{privilledgeID}','ReportController@printOne');
 
+Route::get('mpdf','ReportController@mpdf');
+
 Route::get('media_print','ReportController@mediaPrint');
 
 Route::get('strapi','StrapiController@index');

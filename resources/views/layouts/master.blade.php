@@ -51,7 +51,7 @@
             <a class="navbar-brand" href="/">AAA</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="/all_chart">All Chart</a></li>
+                {{-- <li><a href="/all_chart">All Chart</a></li>
                 <li><a href="/calendar_chart">Calendar Chart</a></li>
                 <li><a href="/pie_chart">Pie Chart</a></li>
                 <li><a href="/column_chart">Column Chart</a></li>
@@ -63,7 +63,9 @@
                 <li><a href="/media_print">Media Print</a></li>
                 <li><a href="/strapi">Strapi</a></li>
                 <li><a href="/date_converter">Date Converter</a></li>
-                <li><a href="/amount_converter/350">Amount Converter</a></li>
+                <li><a href="/amount_converter/350">Amount Converter</a></li> --}}
+
+                <li><a href="/mpdf">MPDF</a></li>
             </ul>
         </div>
     </nav>

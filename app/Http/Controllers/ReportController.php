@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Privilledges;
 use PHPJasper\PHPJasper;  
+use \Mpdf\Mpdf as PDF; 
+use Illuminate\Support\Facades\Storage;
+
 
 class ReportController extends Controller
 {
@@ -13,6 +16,59 @@ class ReportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function mpdf(){
+          // Setup a filename 
+          $documentFileName = "fun.pdf";
+ 
+          // Create the mPDF document
+          $document = new PDF( [
+              'mode' => 'utf-8',
+              'format' => 'A5',
+              'margin_header' => '3',
+              'margin_top' => '2',
+              'margin_bottom' => '2',
+              'margin_footer' => '2',
+              'margin_left' => '2',
+              'orientation' => 'L'
+          ]);   
+          $document->setFont("AKbalthom")  ;
+   
+          // Set some header informations for output
+          $header = [
+              'Content-Type' => 'application/pdf',
+              'Content-Disposition' => 'inline; filename="'.$documentFileName.'"'
+          ];
+   
+          $document->WriteHTML(view('reports.invoice'));
+        	
+        // $ composer require mpdf/mpdf
+          // Write some simple Content
+        //   $document->WriteHTML('
+               
+        // ');
+           
+          // Save PDF on your public storage 
+          Storage::disk('public')->put($documentFileName, $document->Output($documentFileName, "S"));
+           
+          // Get file back from storage with the give header informations
+          return Storage::disk('public')->download($documentFileName, 'Request', $header); //
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function index(Request $request)
     {
         $privilledges = Privilledges::paginate(10);
@@ -69,7 +125,8 @@ class ReportController extends Controller
                 // 'fonts' => public_path('fonts'), // this part here
                 'params' => [
                     'privilledgeID'=>$privilledgeID,
-                    'gender' => 'ប្រុស'
+                    'gender' => 'ប្រុស',
+                    'image_src' => 'https://image.cnbcfm.com/api/v1/image/104891709-Bill_Gates_the_co-Founder.jpg?v=1558120888'
                 ],
                 'db_connection' => [
                     'driver' => 'mysql',
