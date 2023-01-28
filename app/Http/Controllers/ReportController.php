@@ -25,11 +25,12 @@ class ReportController extends Controller
           $document = new PDF( [
               'mode' => 'utf-8',
               'format' => 'A5',
-              'margin_header' => '3',
+              'margin_header' => '2',
               'margin_top' => '2',
               'margin_bottom' => '2',
               'margin_footer' => '2',
               'margin_left' => '2',
+              'margin_right' => '1',
               'orientation' => 'L'
           ]);   
           $document->setFont("AKbalthom")  ;
